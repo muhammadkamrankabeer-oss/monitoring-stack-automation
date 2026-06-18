@@ -1,0 +1,7 @@
+---
+- name: Deploy monitoring stack
+  shell: |
+    cd /home/vagrant/monitoring-stack/docker
+    docker compose up -d
+  args:
+    executable: /bin/bash

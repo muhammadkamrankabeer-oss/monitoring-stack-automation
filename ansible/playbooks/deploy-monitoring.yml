@@ -1,0 +1,8 @@
+---
+- name: Deploy Monitoring Stack
+  hosts: monitoring
+  become: true
+
+  roles:
+    - docker
+    - monitoring

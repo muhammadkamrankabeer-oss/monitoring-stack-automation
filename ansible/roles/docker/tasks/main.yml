@@ -1,0 +1,17 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install Docker packages
+  apt:
+    name:
+      - docker.io
+      - docker-compose
+    state: present
+
+- name: Start Docker service
+  service:
+    name: docker
+    state: started
+    enabled: yes
